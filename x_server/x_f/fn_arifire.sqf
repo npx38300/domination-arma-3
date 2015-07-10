@@ -122,7 +122,7 @@ if (markerType _sel_ari_marker != "" && {_ari_target_pos isEqualTo (markerPos _s
 	private ["_ari_salvos", "_aristr"];
 	_ari_salvos = [_this, 0] call BIS_fnc_param;
 	_aristr = [_this, 1] call BIS_fnc_param;
-	sleep (300 + ((_ari_salvos - 1) * 200)) + (random 60) + (if (d_MissionType != 2) then {0} else {300});
+	sleep 45;
 	d_ari_available = true; publicVariable "d_ari_available";
 	["d_upd_sup"] call d_fnc_NetCallEventToClients;
 	d_kb_logic1 kbTell [d_kb_logic2, d_kb_topic_side, "ArtilleryAvailable", ["1", "", _aristr, []],"GLOBAL"];
