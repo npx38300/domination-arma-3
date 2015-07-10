@@ -137,7 +137,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_artop_1";
-					init="this setGroupid [""Artillery 1""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Artillery 1""]; this setFatigue 0; this enableFatigue false; ";
 					description="First Artillery Operator";
 				};
 			};
@@ -160,7 +160,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_artop_2";
-					init="this setGroupid [""Artillery 2""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Artillery 2""]; this setFatigue 0; this enableFatigue false; ";
 					description="Second Artillery Operator";
 				};
 			};
@@ -238,7 +238,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_alpha_1";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha Leader";
 				};
 				class Item1
@@ -252,7 +252,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_2";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha Sniper";
 				};
 				class Item2
@@ -266,7 +266,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_4";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha AT Soldier";
 				};
 				class Item3
@@ -280,7 +280,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_5";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha GL Soldier";
 				};
 				class Item4
@@ -294,7 +294,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_6";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha Medic";
 				};
 				class Item5
@@ -308,7 +308,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_7";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha MG Gunner";
 				};
 				class Item6
@@ -322,7 +322,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_8";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha AT Soldier";
 				};
 				class Item7
@@ -336,7 +336,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_alpha_3";
-					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Alpha""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Alpha MG Gunner";
 				};
 			};
@@ -359,7 +359,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_bravo_1";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Leader";
 				};
 				class Item1
@@ -373,7 +373,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_2";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Operator";
 				};
 				class Item2
@@ -387,7 +387,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_4";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo MG Gunner";
 				};
 				class Item3
@@ -401,7 +401,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_5";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Sniper";
 				};
 				class Item4
@@ -415,7 +415,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_6";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Medic";
 				};
 				class Item5
@@ -429,7 +429,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_7";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Attack Grenadier";
 				};
 				class Item6
@@ -443,7 +443,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_8";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Demolitions";
 				};
 				class Item7
@@ -457,7 +457,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_bravo_3";
-					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Bravo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Bravo Grenadier";
 				};
 			};
@@ -480,7 +480,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_charlie_1";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie Leader";
 				};
 				class Item1
@@ -494,7 +494,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_2";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie Sniper";
 				};
 				class Item2
@@ -508,7 +508,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_4";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie AT Soldier";
 				};
 				class Item3
@@ -522,7 +522,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_5";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie Soldier";
 				};
 				class Item4
@@ -536,7 +536,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_6";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie Medic";
 				};
 				class Item5
@@ -550,7 +550,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_7";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie MG Gunner";
 				};
 				class Item6
@@ -564,7 +564,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_8";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie AT Soldier";
 				};
 				class Item7
@@ -578,7 +578,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_charlie_3";
-					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Charlie""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Charlie MG Gunner";
 				};
 			};
@@ -601,7 +601,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_delta_1";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Delta Engineer Leader";
 				};
 				class Item1
@@ -615,7 +615,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_delta_2";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Delta Engineer";
 				};
 				class Item2
@@ -629,7 +629,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_delta_4";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Delta Engineer";
 				};
 				class Item3
@@ -643,7 +643,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_delta_3";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Delta Engineer";
 				};
 				class Item4
@@ -657,7 +657,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_delta_5";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Delta Engineer";
 				};
 			};
@@ -680,7 +680,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_echo_1";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo Leader";
 				};
 				class Item1
@@ -694,7 +694,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_2";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo Sniper";
 				};
 				class Item2
@@ -708,7 +708,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_4";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo AT Soldier";
 				};
 				class Item3
@@ -722,7 +722,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_5";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo Soldier";
 				};
 				class Item4
@@ -736,7 +736,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_6";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo Medic";
 				};
 				class Item5
@@ -750,7 +750,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_7";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo MG Gunner";
 				};
 				class Item6
@@ -764,7 +764,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_8";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo AT Soldier";
 				};
 				class Item7
@@ -778,7 +778,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="d_echo_3";
-					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Echo""]; this setFatigue 0; this enableFatigue false; ";
 					description="Team Echo MG Gunner";
 				};
 			};
@@ -1452,7 +1452,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="d_delta_6";
-					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; vehicle this addAction [""<t color='#FF0000'>Server Rules</t>"", ""Server_Rules.sqf"", [], 0, true, true, """", ""vehicle _this == vehicle _target""];";
+					init="this setGroupid [""Delta""]; this setFatigue 0; this enableFatigue false; ";
 					description="Admin Reserved Slot";
 				};
 			};
