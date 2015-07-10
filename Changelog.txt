@@ -1,0 +1,41 @@
+Changelog
+
+3.08
+
+- Fixed: Farp objects weren't deleted (script error broke deletion routine)
+- Even more script optimizations
+- Changed: Small UI changes
+- Changed: AI crews are now created via createVehicleCrew
+
+3.07
+
+- Changed: Bonus vehicle do spawn with full fuel and ammo again
+- Changed: Switched back to old x_reload (which hops through config turrets rather than using new turret commands which broke it)
+- Fixed: Player uncon markers did not get deleted because of a wrong variable reference
+
+3.06
+
+- Fixed: Dropping ammo boxes serveral times (if loaded into MHQ for example) disabled Virtual Arsenal 
+
+3.05
+
+- Fixed: Bobcat (now MHQ vehicle) was missing from vehicles which can load ammo boxes at base
+- Fixed: Reload (vehicle/plane/chopper) was only working for turrets and not for normal magazines (planes can reload again)
+
+3.04
+
+- Fixed vehicle/chopper/plane reload. Even DLC choppers should work now (I love it when scripting commands change three times)
+
+3.03
+
+- Fixed wreck transport (now really works with ropes)
+- Attempt to fix the problem that the Dom action menu sometimes does not show up
+
+3.02:
+
+- Removed unnecessary walls at base
+- Changed disable MHQ near main target from 2000 to 1000 m default
+- Ropes are now enabled by default for heli lifting
+- Switched to new HeadlessClient_F logic unit
+- Rewrote x_reload and spawncrew to make use of the new turret commands
+- Switch to serverCommandExecutable

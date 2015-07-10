@@ -1,0 +1,320 @@
+class FSM
+{
+  fsmName = "Wreckmarker";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "private [""_vehicle"", ""_mname"", ""_sav_pos"", ""_type_name"", ""_marker"", ""_i"", ""_element"",""_timenow"",""_rantime"", ""_timedelete"", ""_thedesmarker"", ""_base""];" \n
+       "" \n
+       "_vehicle = _this;" \n
+       "_thedesmarker = """";" \n
+       "" \n
+       "if (getNumber(configFile/""CfgVehicles""/typeOf _vehicle/""isUav"") == 1) then {" \n
+       "	{" \n
+       "		deleteVehicle _x; // needs probably moveout and then delete" \n
+       "	} forEach (crew _vehicle);" \n
+       "};";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Loop_speed";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class End
+    {
+      name = "End";
+      init = "";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class Loop_speed
+    {
+      name = "Loop_speed";
+      init = "_desmarker = _vehicle getVariable ""d_deserted_marker"";" \n
+       "if (!isNil ""_desmarker"") then {" \n
+       "	 _vehicle setVariable [""d_deserted_marker"", """", true];" \n
+       "	_thedesmarker = """";" \n
+       "	deleteMarker _desmarker;" \n
+       "};	" \n
+       "" \n
+       "_vehicle setVariable [""d_WreckMaxRepair"", (_vehicle getVariable ""d_WreckMaxRepair"") - 1, true];";
+      precondition = "";
+      class Links
+      {
+        class No_more_repairs
+        {
+          priority = 200.000000;
+          to="End_1";
+          precondition = "";
+          condition="(_vehicle getVariable ""d_WreckMaxRepair"") <= 0";
+          action="";
+        };
+        class Pos_Check
+        {
+          priority = 2.000000;
+          to="Saftey_Speed_Che";
+          precondition = "";
+          condition="(getPosATL _vehicle) select 2 < -20";
+          action="";
+        };
+        class Speed_to_high
+        {
+          priority = 1.000000;
+          to="Sleep";
+          precondition = "";
+          condition="(speed _vehicle) > 4";
+          action="";
+        };
+        class Speed_ok
+        {
+          priority = 0.000000;
+          to="Saftey_Speed_Che";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep
+    {
+      name = "Sleep";
+      init = "_timenow = time + (1.5 +  random 2.2);";
+      precondition = "";
+      class Links
+      {
+        class Delay_2
+        {
+          priority = 0.000000;
+          to="Loop_speed";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Saftey_Speed_Che
+    {
+      name = "Saftey_Speed_Che";
+      init = "if ((vectorUp _vehicle) select 2 < 0) then {_vehicle setVectorUp [0,0,1]};";
+      precondition = "";
+      class Links
+      {
+        class Pos_Check
+        {
+          priority = 2.000000;
+          to="Create_Marker";
+          precondition = "";
+          condition="(getPosATL _vehicle) select 2 < -10";
+          action="";
+        };
+        class Speed_to_high
+        {
+          priority = 1.000000;
+          to="Sleep_1";
+          precondition = "";
+          condition="(speed _vehicle) > 4";
+          action="";
+        };
+        class Speed_ok
+        {
+          priority = 0.000000;
+          to="Create_Marker";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep_1
+    {
+      name = "Sleep_1";
+      init = "_timenow = time + (0.532 +  random 1.1);";
+      precondition = "";
+      class Links
+      {
+        class Delay_1
+        {
+          priority = 0.000000;
+          to="Saftey_Speed_Che";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Create_Marker
+    {
+      name = "Create_Marker";
+      init = "_mname = str _vehicle + ""_"" + str time;" \n
+       "_sav_pos = [getPosASL _vehicle select 0,getPosASL _vehicle select 1, 0];" \n
+       "_vehicle setPos _sav_pos;" \n
+       "_vehicle setVelocity [0,0,0];" \n
+       "_type_name = [typeOf (_vehicle), ""CfgVehicles""] call d_fnc_GetDisplayName;" \n
+       "[_mname, _sav_pos,""ICON"",""ColorBlue"",[1,1],format [localize ""STR_DOM_MISSIONSTRING_517"", _type_name],0,""mil_triangle""] call d_fnc_CreateMarkerGlobal;" \n
+       "_timedelete = if (d_WreckDeleteTime != -1) then {time + d_WreckDeleteTime} else {time + (1e+011)};" \n
+       "" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Pickup
+        {
+          priority = 0.000000;
+          to="Pickup_loop";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Sleep_2
+    {
+      name = "Sleep_2";
+      init = "_timenow = time + (3.321 +  random 2.2);" \n
+       "" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Delay_3
+        {
+          priority = 0.000000;
+          to="Pickup_loop";
+          precondition = "";
+          condition="time > _timenow";
+          action="";
+        };
+      };
+    };
+    class Pickup_loop
+    {
+      name = "Pickup_loop";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class isNull__vehicle
+        {
+          priority = 20.000000;
+          to="_";
+          precondition = "";
+          condition="isNull _vehicle";
+          action="";
+        };
+        class _
+        {
+          priority = 4.000000;
+          to="__1";
+          precondition = "";
+          condition="!isNull _vehicle && {(getPosATL _vehicle) select 2 < -10}";
+          action="";
+        };
+        class timecheck_for_de
+        {
+          priority = 2.000000;
+          to="Main_End";
+          precondition = "";
+          condition="time >= _timedelete";
+          action="";
+        };
+        class Wait_for_Pickup
+        {
+          priority = 1.000000;
+          to="Sleep_2";
+          precondition = "";
+          condition="!isNull _vehicle && {(_vehicle distance _sav_pos < 30)}";
+          action="";
+        };
+        class Picked_up
+        {
+          priority = 0.000000;
+          to="Main_End";
+          precondition = "";
+          condition="true";
+          action="";
+        };
+      };
+    };
+    class Main_End
+    {
+      name = "Main_End";
+      init = "deleteMarker _mname;" \n
+       "if (time >= _timedelete && {_vehicle distance _sav_pos < 50}) then {" \n
+       "	deleteVehicle _vehicle;" \n
+       "} else {" \n
+       "	_vehicle spawn d_fnc_wreckmarker2;" \n
+       "};";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class _
+    {
+      name = "_";
+      init = "deleteMarker _mname;" \n
+       "" \n
+       "if (_thedesmarker != """") then {" \n
+       "	deleteMarker _thedesmarker;" \n
+       "};";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="End";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class End_1
+    {
+      name = "End_1";
+      init = "d_allunits_add pushBack _vehicle;" \n
+       "";
+      precondition = "";
+      class Links
+      {
+      };
+    };
+    class __1
+    {
+      name = "__1";
+      init = "_vehicle setPos _sav_pos;" \n
+       "_vehicle setVelocity [0,0,0];";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="Pickup_loop";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End",
+    "Main_End",
+    "End_1",
+  };
+};

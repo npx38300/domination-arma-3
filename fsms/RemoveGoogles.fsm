@@ -1,0 +1,47 @@
+class FSM
+{
+  fsmName = "RemoveGoogles";
+  class States
+  {
+    class Start
+    {
+      name = "Start";
+      init = "";
+      precondition = "";
+      class Links
+      {
+        class _
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = "";
+          condition="";
+          action="";
+        };
+      };
+    };
+    class _
+    {
+      name = "_";
+      init = "player call d_fnc_removeNVGoggles;" \n
+       "";
+      precondition = "";
+      class Links
+      {
+        class Has_NVG__
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = "";
+          condition="player call d_fnc_hasnvgoggles" \n
+           "";
+          action="";
+        };
+      };
+    };
+  };
+  initState="Start";
+  finalStates[] =
+  {
+  };
+};
